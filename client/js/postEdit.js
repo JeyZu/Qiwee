@@ -5,8 +5,8 @@ Template.postEdit.events({
     var currentPostId = this._id;
 
     var postProperties = {
-      title: $(e.target).find('[name=title]').val()
-      message: $(e.target).find('[name=message]').val(),
+      title: $(e.target).find('[name=title]').val(),
+      message: $(e.target).find('[name=message]').val()
     }
 
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
