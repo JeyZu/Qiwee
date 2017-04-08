@@ -1,17 +1,19 @@
 <template name="postSubmit">
-    <form class="main form page">
-        <div class="form-group">
-          <label class="control-label" for="title">Titre</label>
-          <div class="controls">
-              <input name="title" id="title" type="text" placeholder="Votre titre" class="form-control"/>
-            </div>
-        </div>
-      <div class="form-group">
-          <label class="control-label" for="message">Message</label>
-          <div class="controls">
-              <textarea name="message" id="message" type="text" placeholder="Ecrivez votre publication" class="form-control"></textarea>
-            </div>
-        </div>
-      <input type="submit" value="Submit" class="btn btn-primary"/>
-    </form>
+  <form class="main form page">
+    <div class="form-group {{errorClass 'title'}}">
+      <label class="control-label" for="title">Titre</label>
+      <div class="controls">
+        <input name="title" id="title" type="text" value="" placeholder="Votre titre" class="form-control"/>
+        <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'message'}}">
+      <label class="control-label" for="title">Message</label>
+      <div class="controls">
+        <textarea name="message" id="message" type="text" value="" placeholder="Ecrivez votre publication" class="form-control"/>
+        <span class="help-block">{{errorMessage 'message'}}</span>
+      </div>
+    </div>
+    <input type="submit" value="Publiez" class="btn btn-primary"/>
+  </form>
 </template>

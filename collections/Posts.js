@@ -16,6 +16,15 @@ Posts.deny({
 	}
 });
 
+validatePost = function(post) {
+	var errors = {};
+	if(!post.title)
+		errors.title = "Merci de renseigner un titre";
+	if(!post.message)
+		errors.message = "Vous n'avez saisie aucun message";
+	return errors;
+}
+
 Meteor.methods({
 	postInsert: function(postAttributes) {
 		//todo check
@@ -34,4 +43,4 @@ Meteor.methods({
 			_id: postId
 		};
 	}
-})
+});
