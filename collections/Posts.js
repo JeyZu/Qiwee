@@ -12,7 +12,7 @@ Posts.allow({
 Posts.deny({ 
 	update: function(userId, post, fieldNames) {
 	    // may only edit the following two fields:
-	    return (_.without(fieldNames, 'url', 'title').length > 0);
+	    return (_.without(fieldNames, 'title', 'message').length > 0);
 	}
 });
 
@@ -24,7 +24,8 @@ Meteor.methods({
 		var post = _.extend(postAttributes, {
 			userId: user._id,
 			author: user.username,
-			submitted: new Date()
+			submitted: new Date(),
+			flagged: false
 		});
 
 		var postId = Posts.insert(post);
