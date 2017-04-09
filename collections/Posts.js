@@ -27,8 +27,7 @@ validatePost = function(post) {
 
 Meteor.methods({
 	postInsert: function(postAttributes) {
-		//todo check
-
+		
 		var user = Meteor.user();
 		var post = _.extend(postAttributes, {
 			userId: user._id,
