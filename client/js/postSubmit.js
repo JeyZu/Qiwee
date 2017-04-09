@@ -7,7 +7,7 @@ Template.postSubmit.helpers({
 		return Session.get('postSubmitErrors')[field];
 	},
 	errorClass: function(field) {
-		return !!Session.get('postSubmitErrors')[field] ? 'hass-error' : '';
+		return !!Session.get('postSubmitErrors')[field] ? 'has-error' : '';
 	}
 });
 
@@ -22,7 +22,7 @@ Template.postSubmit.events({
 
 		var errors = validatePost(post);
 		if(errors.title || errors.message)
-			return Session.set('PostSubmitErrors', errors);
+			return Session.set('postSubmitErrors', errors);
 
 		Meteor.call('postInsert', post, function(error, result)
 		{
