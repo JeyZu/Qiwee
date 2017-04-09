@@ -33,7 +33,6 @@ Meteor.methods({
 			userId: user._id,
 			author: user.username,
 			submitted: new Date(),
-			flagged: false,
 			commentsCount: 0
 		});
 
