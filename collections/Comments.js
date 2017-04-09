@@ -1,4 +1,4 @@
-Comments = new Mongo.Collection('comments');
+Comments = new Meteor.Collection('comments');
 
 Meteor.methods({
 	commentInsert: function(commentAttributes) {
@@ -14,7 +14,7 @@ Meteor.methods({
 			submitted: new Date()
 		});
 
-		Posts.update(comment.postId, {$inc: {commentsCount: 1}})
+		Posts.update(comment.postId, {$inc: {commentsCount: 1}});
 
 		return Comments.insert(comment);
 	}
