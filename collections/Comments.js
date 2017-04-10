@@ -1,4 +1,4 @@
-Comments = new Mongo.Collection('comments');
+Comments = new Meteor.Collection('comments');
 
 Meteor.methods({
 	commentInsert: function(commentAttributes) {
