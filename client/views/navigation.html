@@ -26,6 +26,11 @@
 			</ul>
 			
 			<ul class="nav navbar-nav navbar-right">
+				{{#if currentUser}}
+					<li class="dropdown">
+						{{> notifications}}
+					</li>
+				{{/if}}
 				{{> loginButtons}}
 			</ul>
 		</div><!-- /.navbar-collapse -->
