@@ -1,7 +1,12 @@
 <template name="authorItem">
 	<div class="post">
 		<div class="post-content">
-			<h3>{{author}} a écrit <span class="badge">{{commentsCount}}</span> commentaires</h3>
+			<h3>{{_id}} a écrit</h3> 
+			<ul>
+				{{#each posts}}
+					{{title}}
+			</ul>
+			<span class="badge">{{countComments}}</span> commentaires
 		</div>
 	</div>
 </template>
