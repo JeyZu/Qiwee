@@ -1,18 +1,7 @@
 <template name="forum">
 	<h1>Forum</h1>
 	<h5>Bienvenue dans la partie forum.</h5>
-	<span class="pull-rigth">
-		<div class="btn-group">
-		  <button type="button" class="btn btn-primary">Month</button>
-		  <button type="button" class="btn btn-primary">Week</button>
-		  <button type="button" class="btn btn-primary">Day</button>
-		</div>
-	</span>
-
-	<div id="main">
-		{{> yield "forumContent"}}
-	</div>
-
+	
 	{{> postsList}}
 
 </template>
