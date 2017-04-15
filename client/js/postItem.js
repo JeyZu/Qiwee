@@ -3,6 +3,6 @@ Template.postItem.helpers({
 		return this.userId === Meteor.userId();
 	},
 	submittedPost: function() {
-		return this.submitted.toString();
+		return moment(this.submitted).format('LLL');
 	}
 });
