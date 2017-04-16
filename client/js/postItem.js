@@ -5,7 +5,7 @@ Template.postItem.helpers({
 	submittedPost: function() {
 		return moment(this.submitted).format('LLL');
 	},
-	upvotedClass: function {
+	upvotedClass: function() {
 		var userId = Meteor.userId();
 		if(userId && !_include(this.upvoters, userId))
 			return 'btn-primary upvotable';
