@@ -1,5 +1,6 @@
 <template name="postItem">
 	<div class="post">
+		<a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
 		<div class="post-content">
 			<h3><a href="{{pathFor 'postPage'}}">{{title}}</a><span class="badge">{{commentsCount}}</span> commentaires</h3>
 			<p>{{message}}</p>
