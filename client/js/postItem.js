@@ -9,8 +9,8 @@ Template.postItem.helpers({
 		var userId = Meteor.userId();
 		if(userId && !_include(this.upvoters, userId))
 			return 'btn-primary upvotable';
-		
-		return 'disabled';
+		else
+			return 'disabled';
 	}
 });
 
