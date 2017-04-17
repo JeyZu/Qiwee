@@ -7,6 +7,9 @@ Template.navigation.helpers({
 			return Router.current() && Router.current().route.getName() === name
 		});
 
+		console.log(active);
+		console.log(args);
+
 		return active && 'active';
 	}
 });
