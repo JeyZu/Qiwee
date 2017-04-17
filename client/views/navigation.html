@@ -16,12 +16,18 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
-				<li class="dropdown">
+				<li class="dropdown {{activeRouteClass 'forum' 'newPosts' 'bestPosts' 'postSubmit'}}">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Forum <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="{{pathFor 'newPosts'}}">Derniers postes</a></li>
-						<li><a href="{{pathFor 'bestPosts'}}">Les plus populaires</a></li>
-						<li><a href="{{pathFor 'postSubmit'}}">Ecrire un poste</a></li>
+						<li class="{{activeRouteClass 'newPosts'}}">
+							<a href="{{pathFor 'newPosts'}}">Derniers postes</a>
+						</li>
+						<li class="{{activeRouteClass 'bestPosts'}}">
+							<a href="{{pathFor 'bestPosts'}}">Les plus populaires</a>
+						</li>
+						<li class="{{activeRouteClass 'postSubmit'}}">
+							<a href="{{pathFor 'postSubmit'}}">Ecrire un poste</a>
+						</li>
 					</ul>
 				</li> 
 			</ul>
