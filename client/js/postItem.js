@@ -6,11 +6,12 @@ Template.postItem.helpers({
 		return moment(this.submitted).format('LLL');
 	},
 	upvotedClass: function() {
-		var userId = Meteor.userId();
-		if(userId && !_include(this.upvoters, userId))
-			return 'btn-primary upvotable';
-		else
-			return 'disabled';
+	    var userId = Meteor.userId();
+	    if (userId && !_.include(this.upvoters, userId)) {
+	    	return 'btn-primary upvotable';
+	    } else {      
+		return 'disabled';
+		}
 	}
 });
 
@@ -19,4 +20,4 @@ Template.postItem.events({
 		e.preventDefault();
 		Meteor.call('upvote', this._id);
 	}
-})
+});
