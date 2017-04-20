@@ -25,6 +25,7 @@ accounts-password@1.3.4
 aldeed:collection2
 aldeed:autoform
 twbs:bootstrap
+ian:accounts-ui-bootstrap-3
 jameslefrere:twitch
 jameslefrere:accounts-twitch
 sacha:spin
