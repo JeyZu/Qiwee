@@ -42,5 +42,4 @@ orionjs:bootstrap
 orionjs:core
 aldeed:simple-schema
 orionjs:relationships
-accounts-ui
 pierreeric:orion-lang-fr
