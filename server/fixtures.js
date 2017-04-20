@@ -11,6 +11,7 @@ if (Posts.find().count() === 0) {
     },
     username: "JeyZu",
     email: "jeyzu@example.com",
+    password: "123456",
   });
 
   var sacha = Meteor.users.findOne(sachaId);
