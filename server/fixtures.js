@@ -33,3 +33,4 @@ if (Posts.find().count() === 0) {
     submitted: new Date(now - 5 * 3600 * 1000),
     body: 'Interesting project, can I get involved?'
   });
+}
