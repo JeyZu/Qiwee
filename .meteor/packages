@@ -40,3 +40,5 @@ accounts-twitter
 matb33:collection-hooks
 orionjs:bootstrap
 orionjs:core
+aldeed:simple-schema
+orionjs:relationships
