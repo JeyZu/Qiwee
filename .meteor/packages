@@ -32,14 +32,10 @@ sacha:spin
 session@1.1.7
 rzymek:moment-locale-fr
 fortawesome:fontawesome
+alanning:roles
 random
 email
 accounts-facebook
 accounts-google
 accounts-twitter
 matb33:collection-hooks
-orionjs:bootstrap
-orionjs:core
-aldeed:simple-schema
-orionjs:relationships
-pierreeric:orion-lang-fr
