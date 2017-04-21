@@ -1,6 +1,6 @@
 Template.postItem.helpers({
-	ownPost: function() {
-		return this.userId === Meteor.userId();
+	canEdit: function() {
+		return this.userId === Meteor.userId() || Roles.userIssInRole(Meteor.user(), ['admin']);
 	},
 	submittedPost: function() {
 		return moment(this.submitted).format('LLL');

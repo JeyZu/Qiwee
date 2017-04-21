@@ -25,9 +25,11 @@
 						<li class="{{activeRouteClass 'bestPosts'}}">
 							<a href="{{pathFor 'bestPosts'}}">Les plus populaires</a>
 						</li>
-						<li class="{{activeRouteClass 'postSubmit'}}">
-							<a href="{{pathFor 'postSubmit'}}">Ecrire un poste</a>
-						</li>
+						{{#if currentUser}}
+							<li class="{{activeRouteClass 'postSubmit'}}">
+								<a href="{{pathFor 'postSubmit'}}">Ecrire un poste</a>
+							</li>
+						{{/if}}
 					</ul>
 				</li> 
 			</ul>
