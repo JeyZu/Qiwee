@@ -7,7 +7,9 @@
 			<p>
 				{{pluralize votes "Vote"}}, 
 				par {{author}} le  {{submittedPost}}
-				{{#if or isInRole 'admin' 'team-qiwee' ownPost}}<a href="{{pathFor 'postEdit'}}">Editer</a>{{/if}}
+				{{#if or isInRole 'admin' 'team-qiwee' ownPost}}
+					<a href="{{pathFor 'postEdit'}}">Editer</a>
+				{{/if}}
 			</p>
 		</div>
 	</div>
