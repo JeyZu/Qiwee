@@ -16,7 +16,7 @@ if (Posts.find().count() === 0) {
 
   var sacha = Meteor.users.findOne(sachaId);
 
-  Roles.addUserToRoles(sachaId, ['admin'], 'team-qiwee');
+  Roles.addUsersToRoles(sachaId, ['admin'], 'team-qiwee');
 
   var telescopeId = Posts.insert({
     title: 'Introducing Qiwee',
